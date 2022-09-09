@@ -7,14 +7,14 @@
 		     <!-- CSRF Token -->
 		     <meta name="csrf-token" content="{{ csrf_token() }}">
 		 
-		     <title>{{ config('app.name', 'Vue Laravel SPA') }}</title>
+		     <title>{{ config('app.name', 'Rare Disease') }}</title>
 		 
 		     <!-- Styles -->
 		     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 	 </head>
 	 <body>
 		 <div id="app">
-      <example-component></example-component>
+      <header-component></header-component>
 		 </div>
 		 <!-- Scripts -->
 		 <script src="{{ mix('/js/app.js') }}" defer></script>
