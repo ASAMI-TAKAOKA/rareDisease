@@ -19,7 +19,10 @@
                 <td>ああああああああ</td>
                 <td>高橋</td>
                 <td>
-                    <button class="btn btn-primary">詳細</button>
+                    <!-- `v-bind` を使った javaScript 式の書き方 -->
+                    <!-- 名前を付けたルートにリンクするには、 router-link コンポーネントの to プロパティにオブジェクトを渡す。 -->
+                    <!-- /diseases/1 に飛ぶ -->
+                    <router-link v-bind:to="{name: 'disease.show', params: {diseaseId: 1}}"><button class="btn btn-primary">詳細</button></router-link>
                 </td>
                 <td>
                     <button class="btn btn-success">編集</button>
@@ -34,7 +37,7 @@
                 <td>いいいいいい</td>
                 <td>SUZUKI</td>
                 <td>
-                    <button class="btn btn-primary">詳細</button>
+                    <router-link v-bind:to="{name: 'disease.show', params: {diseaseId: 2}}"><button class="btn btn-primary">詳細</button></router-link>
                 </td>
                 <td>
                     <button class="btn btn-success">編集</button>
@@ -49,7 +52,7 @@
                 <td>ううううう</td>
                 <td>伊藤</td>
                 <td>
-                    <button class="btn btn-primary">詳細</button>
+                    <router-link v-bind:to="{name: 'disease.show', params: {diseaseId: 3}}"><button class="btn btn-primary">詳細</button></router-link>
                 </td>
                 <td>
                     <button class="btn btn-success">編集</button>
