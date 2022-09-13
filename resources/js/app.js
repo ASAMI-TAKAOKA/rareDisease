@@ -8,6 +8,7 @@ import VueRouter from "vue-router";
 import HeaderComponent from "./components/HeaderComponent";
 import DiseaseListComponent from "./components/DiseaseListComponent";
 import DiseaseShowComponent from "./components/DiseaseShowComponent";
+import ArticleCreateComponent from "./components/ArticleCreateComponent";
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -28,9 +29,11 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/diseases',
-            // 名前付きルートを設定
+            // ルートを指定
+            path: '/',
+            // 名前付きルートの設定
             name: 'disease.list',
+            // コンポーネント名
             component: DiseaseListComponent
         },
         {
@@ -40,6 +43,11 @@ const router = new VueRouter({
             // 親コンポーネント（app.js）から子コンポーネントへprops経由で渡すため、オブジェクトのリンク設定に「props:true」を追加
             // propsでコンポーネントの再利用性が高まる。
             props: true
+        },
+        {
+            path: '/articles/create',
+            name: 'article.create',
+            component: ArticleCreateComponent
         },
     ]
 });
