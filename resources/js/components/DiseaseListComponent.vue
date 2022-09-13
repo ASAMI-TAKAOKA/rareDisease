@@ -25,7 +25,7 @@
                     <router-link v-bind:to="{name: 'disease.show', params: {diseaseId: 1}}"><button class="btn btn-primary">詳細</button></router-link>
                 </td>
                 <td>
-                    <button class="btn btn-success">編集</button>
+                    <router-link v-bind:to="{name: 'article.edit', params: {diseaseId: 1}}"><button class="btn btn-success">編集</button></router-link>
                 </td>
                 <td>
                     <button class="btn btn-danger">削除</button>

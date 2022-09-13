@@ -9,6 +9,7 @@ import HeaderComponent from "./components/HeaderComponent";
 import DiseaseListComponent from "./components/DiseaseListComponent";
 import DiseaseShowComponent from "./components/DiseaseShowComponent";
 import ArticleCreateComponent from "./components/ArticleCreateComponent";
+import ArticleEditComponent from "./components/ArticleEditComponent";
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -48,6 +49,12 @@ const router = new VueRouter({
             path: '/articles/create',
             name: 'article.create',
             component: ArticleCreateComponent
+        },
+        {
+            path: '/articles/:diseaseId/edit',
+            name: 'article.edit',
+            component: ArticleEditComponent,
+            props: true
         },
     ]
 });
