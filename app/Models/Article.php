@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+        // $fillable はホワイトリストとして利用することができる。
+        // 指定したカラムに対してのみ、 create()やupdate() 、fill()などが可能
+    protected $fillable = [
+        'title',
+        'body',
+        'user-name',
+    ];
 }
