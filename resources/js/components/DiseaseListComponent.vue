@@ -16,8 +16,8 @@
               <tr>
                 <th scope="row">1</th>
                 <td>パーキンソン病</td>
-                <td>ああああああああ</td>
-                <td>高橋</td>
+                <td>○○○○○が特徴です。</td>
+                <td>高橋さん</td>
                 <td>
                     <!-- `v-bind` を使った javaScript 式の書き方 -->
                     <!-- 名前を付けたルートにリンクするには、 router-link コンポーネントの to プロパティにオブジェクトを渡す。 -->
@@ -34,8 +34,8 @@
             <tr>
                 <th scope="row">1</th>
                 <td>メニエール病</td>
-                <td>いいいいいい</td>
-                <td>SUZUKI</td>
+                <td>○○○○○が特徴です。</td>
+                <td>SUZUKIさん</td>
                 <td>
                     <router-link v-bind:to="{name: 'disease.show', params: {diseaseId: 2}}"><button class="btn btn-primary">詳細</button></router-link>
                 </td>
@@ -49,8 +49,8 @@
             <tr>
                 <th scope="row">1</th>
                 <td>副腎疲労</td>
-                <td>ううううう</td>
-                <td>伊藤</td>
+                <td>○○○○○が特徴です。</td>
+                <td>伊藤さん</td>
                 <td>
                     <router-link v-bind:to="{name: 'disease.show', params: {diseaseId: 3}}"><button class="btn btn-primary">詳細</button></router-link>
                 </td>
