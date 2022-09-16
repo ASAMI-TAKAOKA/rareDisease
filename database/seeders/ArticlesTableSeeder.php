@@ -1,8 +1,9 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders; // ファイルの居場所を示す
 
 use Illuminate\Database\Seeder;
+use App\Models\Article; // クラスをインポート
 
 class ArticlesTableSeeder extends Seeder
 {
