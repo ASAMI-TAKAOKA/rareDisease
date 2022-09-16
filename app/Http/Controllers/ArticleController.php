@@ -15,4 +15,8 @@ class ArticleController extends Controller
     {
         return $article;
     }
+    public function store(Request $request)
+    {
+        return Article::create($request->all()); // allメソッドでリクエストの全入力データを取得しcreateメソッドでデータ登録
+    }
 }
