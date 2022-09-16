@@ -11,4 +11,8 @@ class ArticleController extends Controller
     {
         return Article::all();
     }
+    public function show(Article $article) // アクションメソッドの第２引数でパラメータを受け取る
+    {
+        return $article;
+    }
 }
