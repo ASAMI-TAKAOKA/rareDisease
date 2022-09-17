@@ -15,8 +15,14 @@ class ArticleController extends Controller
     {
         return $article;
     }
-    public function store(Request $request)
+    public function store(Request $request) // formで入力された値を保存するstoreメソッド
     {
         return Article::create($request->all()); // allメソッドでリクエストの全入力データを取得しcreateメソッドでデータ登録
+    }
+    public function update(Request $request, $article) // update()メソッドの第2引数で、URLに埋め込まれたarticleが$articleとして受け取られている
+    {
+        $article = Article::find($article); // Articleモデルクラスのfind()メソッドの引数に$articleを渡して、指定した記事インスタンスを$articleで参照している
+        $article -> update($request->all()); // update()メソッドの引数に、更新したい要素を渡し、それを$articleに代入（上書き）
+        return $article;
     }
 }
