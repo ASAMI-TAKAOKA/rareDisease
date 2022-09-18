@@ -6,10 +6,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HeaderComponent from "./components/HeaderComponent";
-import DiseaseListComponent from "./components/DiseaseListComponent";
-import DiseaseShowComponent from "./components/DiseaseShowComponent";
-import ArticleCreateComponent from "./components/ArticleCreateComponent";
-import ArticleEditComponent from "./components/ArticleEditComponent";
+import DiseaseArticleListComponent from "./components/DiseaseArticleListComponent";
+import DiseaseArticleShowComponent from "./components/DiseaseArticleShowComponent";
+import DiseaseArticleCreateComponent from "./components/DiseaseArticleCreateComponent";
+import DiseaseArticleEditComponent from "./components/DiseaseArticleEditComponent";
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -33,27 +33,27 @@ const router = new VueRouter({
             // ルートを指定
             path: '/',
             // 名前付きルートの設定
-            name: 'disease.list',
+            name: 'disease.article.list',
             // コンポーネント名
-            component: DiseaseListComponent
+            component: DiseaseArticleListComponent
         },
         {
             path: '/diseases/:diseaseId',
-            name: 'disease.show',
-            component: DiseaseShowComponent,
+            name: 'disease.article.show',
+            component: DiseaseArticleShowComponent,
             // 親コンポーネント（app.js）から子コンポーネントへprops経由で渡すため、オブジェクトのリンク設定に「props:true」を追加
             // propsでコンポーネントの再利用性が高まる。
             props: true
         },
         {
             path: '/articles/create',
-            name: 'article.create',
-            component: ArticleCreateComponent
+            name: 'disease.article.create',
+            component: DiseaseArticleCreateComponent
         },
         {
             path: '/articles/:diseaseId/edit',
-            name: 'article.edit',
-            component: ArticleEditComponent,
+            name: 'disease.article.edit',
+            component: DiseaseArticleEditComponent,
             props: true
         },
     ]
