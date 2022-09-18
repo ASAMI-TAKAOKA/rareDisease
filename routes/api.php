@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/articles', 'App\Http\Controllers\ArticleController@index');
-Route::get('/articles/{article}', 'App\Http\Controllers\ArticleController@show');
-Route::post('/articles', 'App\Http\Controllers\ArticleController@store');
-Route::put('/articles/{article}', 'App\Http\Controllers\ArticleController@update');
-Route::delete('/articles/{article}', 'App\Http\Controllers\ArticleController@destroy');
+Route::get('/diseaseArticles', 'App\Http\Controllers\DiseaseArticleController@index');
+Route::get('/diseaseArticles/{diseaseArticle}', 'App\Http\Controllers\DiseaseArticleController@show');
+Route::post('/diseaseArticles', 'App\Http\Controllers\DiseaseArticleController@store');
+Route::put('/diseaseArticles/{diseaseArticle}', 'App\Http\Controllers\DiseaseArticleController@update');
+Route::delete('/diseaseArticles/{diseaseArticle}', 'App\Http\Controllers\DiseaseArticleController@destroy');

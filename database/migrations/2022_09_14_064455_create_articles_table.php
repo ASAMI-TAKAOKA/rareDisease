@@ -14,11 +14,11 @@ class CreateArticlesTable extends Migration
     public function up()
     {
         // Blueprintとは設計図のこと
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('disease_articles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title', 100);
             $table->string('body', 100);
-            $table->string('user-name', 100);
+            $table->string('user_name', 100);
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('disease_articles');
     }
 }

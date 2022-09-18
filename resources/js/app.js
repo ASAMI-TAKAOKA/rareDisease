@@ -38,7 +38,7 @@ const router = new VueRouter({
             component: DiseaseArticleListComponent
         },
         {
-            path: '/diseases/:diseaseId',
+            path: '/diseaseArticles/:diseaseArticleId',
             name: 'disease.article.show',
             component: DiseaseArticleShowComponent,
             // 親コンポーネント（app.js）から子コンポーネントへprops経由で渡すため、オブジェクトのリンク設定に「props:true」を追加
@@ -46,12 +46,12 @@ const router = new VueRouter({
             props: true
         },
         {
-            path: '/articles/create',
+            path: '/diseaseArticles/create',
             name: 'disease.article.create',
             component: DiseaseArticleCreateComponent
         },
         {
-            path: '/articles/:diseaseId/edit',
+            path: '/diseaseArticles/:diseaseArticleId/edit',
             name: 'disease.article.edit',
             component: DiseaseArticleEditComponent,
             props: true

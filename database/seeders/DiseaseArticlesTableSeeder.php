@@ -3,9 +3,9 @@
 namespace Database\Seeders; // ファイルの居場所を示す
 
 use Illuminate\Database\Seeder;
-use App\Models\Article; // クラスをインポート
+use App\Models\DiseaseArticle; // クラスをインポート
 
-class ArticlesTableSeeder extends Seeder
+class DiseaseArticlesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,10 +19,10 @@ class ArticlesTableSeeder extends Seeder
         // レコードは10件つくる。
         // 1からカウントする形にする。
         for ($i = 1; $i <= 10; $i++) {
-            Article::create([
-                'title' => 'title' . $i,
-                'body' => 'body' . $i,
-                'user-name' => 'user-name' . $i,
+            DiseaseArticle::create([
+                'title' => 'タイトル' . $i,
+                'body' => '概要' . $i,
+                'user_name' => 'ユーザー' . $i,
             ]);
         }
     }
