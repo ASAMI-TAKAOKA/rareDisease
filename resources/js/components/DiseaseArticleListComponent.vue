@@ -29,7 +29,7 @@
                         </router-link>
                     </td>
                     <td>
-                        <button class="btn btn-danger">削除</button>
+                        <button class="btn btn-danger" v-on:click="deleteDiseaseArticle(list.id)">削除</button>
                     </td>
                 </tr>
             </tbody>
@@ -50,7 +50,13 @@
                     .then((res) => {
                         this.diseaseArticleLists = res.data;
                     });
-            }
+            },
+            deleteDiseaseArticle(id) {
+                axios.delete('/api/diseaseArticles/' + id)
+                    .then((res) => {
+                        this.getDiseaseArticleLists(); // 削除完了したら、getDiseaseArticleListsメソッドを呼んで記事一覧を再読み込み。
+                    });
+            },
         },
         mounted() {
             this.getDiseaseArticleLists();
