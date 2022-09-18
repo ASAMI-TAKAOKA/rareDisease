@@ -1,28 +1,29 @@
 <template>
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-sm-6">
-                  <form>
-                      <div class="form-group row border-bottom">
-                          <label for="disease-id" class="col-sm-3 col-form-label">ID</label>
-                          <input type="text" class="col-sm-9 form-control-plaintext" readonly id="disease-id" v-model="diseaseArticleShow.id">
-                      </div>
-                      <div class="form-group row border-bottom">
-                          <label for="disease-name" class="col-sm-3 col-form-label">病名</label>
-                          <input type="text" class="col-sm-9 form-control-plaintext" readonly id="disease-name" v-model="diseaseArticleShow.title">
-                      </div>
-                      <div class="form-group row border-bottom">
-                          <label for="summary" class="col-sm-3 col-form-label">概要</label>
-                          <input type="text" class="col-sm-9 form-control-plaintext" readonly id="summary" v-model="diseaseArticleShow.body">
-                      </div>
-                      <div class="form-group row border-bottom">
-                          <label for="user-name" class="col-sm-3 col-form-label">ユーザー名</label>
-                          <input type="text" class="col-sm-9 form-control-plaintext" readonly id="user-name" v-model="diseaseArticleShow.user_name">
-                      </div>
-                  </form>
-              </div>
-          </div>
-      </div>
+    <div class="container">
+        <h3 class="title">詳細</h3>
+            <div class="row justify-content-center">
+                <div class="col-sm-6">
+                    <form>
+                        <div class="form-group row border-bottom">
+                            <label for="disease-id" class="col-sm-3 col-form-label">ID</label>
+                            <input type="text" class="col-sm-9 form-control-plaintext" readonly id="disease-id" v-model="diseaseArticleShow.id">
+                        </div>
+                        <div class="form-group row border-bottom">
+                            <label for="disease-name" class="col-sm-3 col-form-label">病名</label>
+                            <input type="text" class="col-sm-9 form-control-plaintext" readonly id="disease-name" v-model="diseaseArticleShow.title">
+                        </div>
+                        <div class="form-group row border-bottom">
+                            <label for="summary" class="col-sm-3 col-form-label">概要</label>
+                            <input type="text" class="col-sm-9 form-control-plaintext" readonly id="summary" v-model="diseaseArticleShow.body">
+                        </div>
+                        <div class="form-group row border-bottom">
+                            <label for="user-name" class="col-sm-3 col-form-label">ユーザー名</label>
+                            <input type="text" class="col-sm-9 form-control-plaintext" readonly id="user-name" v-model="diseaseArticleShow.user_name">
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
   </template>
   
   <script>

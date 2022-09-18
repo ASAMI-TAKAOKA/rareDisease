@@ -1,25 +1,26 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-6">
-                <form v-on:submit.prevent="submit">
-                    <div class="form-group row">
-                        <label for="title" class="col-sm-3 col-form-label">タイトル</label>
-                        <input type="text" class="col-sm-9 form-control" id="title" v-model="diseaseArticleCreate.title">
-                    </div>
-                    <div class="form-group row">
-                        <label for="body" class="col-sm-3 col-form-label">本文</label>
-                        <input type="text" class="col-sm-9 form-control" id="body" v-model="diseaseArticleCreate.body">
-                    </div>
-                    <div class="form-group row">
-                        <label for="user-name" class="col-sm-3 col-form-label">お名前</label>
-                        <input type="text" class="col-sm-9 form-control" id="user-name" v-model="diseaseArticleCreate.user_name">
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-primary">送信</button>
-                </form>
+        <h3 class="title">新規記事作成</h3>
+            <div class="row justify-content-center">
+                <div class="col-sm-6">
+                    <form v-on:submit.prevent="submit">
+                        <div class="form-group row">
+                            <label for="title" class="col-sm-3 col-form-label">タイトル</label>
+                            <input type="text" class="col-sm-9 form-control" id="title" v-model="diseaseArticleCreate.title">
+                        </div>
+                        <div class="form-group row">
+                            <label for="body" class="col-sm-3 col-form-label">本文</label>
+                            <input type="text" class="col-sm-9 form-control" id="body" v-model="diseaseArticleCreate.body">
+                        </div>
+                        <div class="form-group row">
+                            <label for="user-name" class="col-sm-3 col-form-label">お名前</label>
+                            <input type="text" class="col-sm-9 form-control" id="user-name" v-model="diseaseArticleCreate.user_name">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">送信</button>
+                    </form>
+                </div>
             </div>
-        </div>
     </div>
 </template>
 
