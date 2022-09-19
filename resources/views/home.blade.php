@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    <p>ああああ</p>
+                    <header-component></header-component>
+                    <router-view></router-view>
                 </div>
             </div>
         </div>
