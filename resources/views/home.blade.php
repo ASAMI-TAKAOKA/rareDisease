@@ -14,8 +14,6 @@
                         </div>
                     @endif
                     <p>ああああ</p>
-                    <header-component></header-component>
-                    <router-view></router-view>
                 </div>
             </div>
         </div>
