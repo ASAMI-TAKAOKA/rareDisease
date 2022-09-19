@@ -10,6 +10,9 @@ import DiseaseArticleListComponent from "./components/DiseaseArticleListComponen
 import DiseaseArticleShowComponent from "./components/DiseaseArticleShowComponent";
 import DiseaseArticleCreateComponent from "./components/DiseaseArticleCreateComponent";
 import DiseaseArticleEditComponent from "./components/DiseaseArticleEditComponent";
+import UserListComponent from "./components/UserListComponent";
+import UserShowComponent from "./components/UserShowComponent";
+import MyPageComponent from "./components/MyPageComponent";
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -36,6 +39,23 @@ const router = new VueRouter({
             name: 'disease.article.list',
             // コンポーネント名
             component: DiseaseArticleListComponent
+        },
+        {
+            path: '/users',
+            name: 'user.list',
+            component: UserListComponent
+        },
+        {
+            path: '/users/:userId',
+            name: 'user.show',
+            component: UserShowComponent,
+            props: true
+        },
+        {
+            path: '/mypage/:myId',
+            name: 'mypage',
+            component: MyPageComponent,
+            props: true
         },
         {
             path: '/diseaseArticles/:diseaseArticleId',

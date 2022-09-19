@@ -1,6 +1,9 @@
 <template>
     <div class="container">
         <h3 class="title">希少疾患一覧</h3>
+        <router-link v-bind:to="{name: 'disease.article.create'}">
+        <button class="btn btn-success">希少疾患に関する新規記事を投稿する</button>
+        </router-link>
             <table class="table table-hover">
                 <thead class="thead-light">
                 <tr>
@@ -48,6 +51,7 @@
         methods: {
             getDiseaseArticleLists() {
                 axios.get('/api/diseaseArticles')
+                // axios.get('/api/users')
                     .then((res) => {
                         this.diseaseArticleLists = res.data;
                     });

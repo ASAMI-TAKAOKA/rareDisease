@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+//追記
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::prefix('api')->group(function () {
+    Route::get('/users', [UserController::class, 'index']);
+});
 
 Route::get('/', function() {
     return view('layouts/app');
