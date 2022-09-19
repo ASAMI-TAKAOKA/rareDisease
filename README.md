@@ -3,10 +3,10 @@
 #### 使用技術・環境
 - フロントエンド
   - HTML5
-  - Vue.js 2.6.12
+  - Vue.js 2
 
 - バックエンド
-  - Laravel 8.83.23
+  - Laravel 8
 
 - DB
   - MySQL 5.7
