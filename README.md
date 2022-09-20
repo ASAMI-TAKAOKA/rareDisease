@@ -62,7 +62,7 @@
 ### ⑧ユーザー詳細画面（要修正）
 <br>
 <br>
-![スクリーンショット 2022-09-20 19 22 03](https://user-images.githubusercontent.com/77926245/191233850-94441d5c-bd7f-4524-ba6c-beca754c7d60.png)
+![スクリーンショット 2022-09-20 19 22 03](https://user-images.githubusercontent.com/77926245/191241540-085f6c16-9692-43bb-8b94-56a2ca3b2c22.png)
 <br>
 <br>
 
